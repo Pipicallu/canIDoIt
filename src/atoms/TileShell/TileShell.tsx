@@ -1,6 +1,9 @@
+import { type Dispatch, type SetStateAction } from "react";
+import { Button, Image } from "antd";
+
 interface TileShellProps {
   imageSrc: string;
-  setCurrentImageUrl: () => void;
+  setCurrentImageUrl: Dispatch<SetStateAction<string>>;
 }
 
 const TileShell = ({ imageSrc, setCurrentImageUrl }: TileShellProps) => {
@@ -8,9 +11,12 @@ const TileShell = ({ imageSrc, setCurrentImageUrl }: TileShellProps) => {
   const altText = pathArray[pathArray.length - 1];
 
   return (
-    <button onClick={() => setCurrentImageUrl()}>
-      <img src={imageSrc} alt={altText} />
-    </button>
+    <Button
+      style={{ borderRadius: 0 }}
+      onClick={() => setCurrentImageUrl(imageSrc)}
+    >
+      <Image preview={false} src={imageSrc} alt={altText} />
+    </Button>
   );
 };
 

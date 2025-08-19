@@ -14,7 +14,7 @@ const Canvas = ({
   height: number;
   tileSize: number;
   gridWidth?: number;
-  gridHeight: number;
+  gridHeight?: number;
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 

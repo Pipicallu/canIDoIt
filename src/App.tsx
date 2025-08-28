@@ -6,13 +6,6 @@ function App() {
     <>
       <div style={{ marginBottom: "16px" }}>Game assets</div>
       <TileMapCreatorPage />
-      {/* <Canvas
-        width={512}
-        height={512}
-        tileSize={16}
-        gridHeight={32}
-        gridWidth={32}
-      /> */}
     </>
   );
 }
